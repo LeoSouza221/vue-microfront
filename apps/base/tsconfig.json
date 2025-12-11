@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.json",
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ],
+  "compilerOptions": {
+    "paths": {
+      "@micro/shared": ["../../packages/shared/src"],
+      "@micro/shared/*": ["../../packages/shared/src/*"]
+    },
+  },
+  "include": ["src"]
+}

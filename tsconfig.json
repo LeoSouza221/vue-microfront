@@ -1,0 +1,23 @@
+{
+  "files": [],
+  "include": [
+    ["packages/shared/src/**/*"]
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    },
+    { "path": "./packages/shared" },
+    { "path": "./apps/host" },
+    { "path": "./apps/base" },
+  ],
+  "compilerOptions": {
+    "paths": {
+      "@micro/shared": ["./packages/shared/src"],
+      "@micro/shared/*": ["./packages/shared/src/*"]
+    }
+  },
+}
