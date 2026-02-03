@@ -37,4 +37,7 @@ export default defineConfig({
     minify: false,
     cssCodeSplit: false,
   },
+  css: {
+     postcss: require.resolve('../../packages/shared/src/ui/postcss.config.ts')
+  }
 })
