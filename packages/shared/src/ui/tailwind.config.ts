@@ -1,4 +1,3 @@
-import type { Config } from 'tailwindcss'
 
 export default {
   content: [
@@ -9,5 +8,6 @@ export default {
   theme: {
     extend: {}
   },
-  plugins: []
-} satisfies Config
+  plugins: [],
+  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}', './apps/host/src/**/*.{vue,ts,js}', './apps/base/src/**/*.{vue,ts,js}', './apps/base/index.html', './apps/host/index.html'],
+}

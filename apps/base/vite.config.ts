@@ -3,6 +3,7 @@ import { federation } from "@module-federation/vite";
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import postcssConfig from '../../packages/shared/src/ui/postcss.config'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -22,9 +23,10 @@ export default defineConfig({
       }
     })
   ],
-  resolve: {
+ resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@micro/shared': fileURLToPath(new URL('../../packages/shared/src', import.meta.url)),
     },
   },
   server: {
@@ -38,6 +40,6 @@ export default defineConfig({
     modulePreload: false,
   },
   css: {
-     postcss: require.resolve('../../packages/shared/src/ui/postcss.config.ts')
+   postcss: postcssConfig
   }
 })

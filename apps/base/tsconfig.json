@@ -10,6 +10,7 @@
     }
   ],
   "compilerOptions": {
+    "composite": true,
     "paths": {
       "@micro/shared": ["../../packages/shared/src"],
       "@micro/shared/*": ["../../packages/shared/src/*"]

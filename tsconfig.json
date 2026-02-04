@@ -1,7 +1,7 @@
 {
   "files": [],
   "include": [
-    ["packages/shared/src/**/*"]
+    "packages/shared/src/**/*"
   ],
   "references": [
     {
@@ -12,13 +12,17 @@
     },
     { "path": "./packages/shared" },
     { "path": "./apps/host" },
-    { "path": "./apps/base" },
+    { "path": "./apps/base" }
   ],
   "compilerOptions": {
+    "composite": true,
     "paths": {
       "@micro/shared": ["./packages/shared/src"],
       "@micro/shared/*": ["./packages/shared/src/*"]
     },
-    "lib": ["ES2020", "DOM", "DOM.Iterable"]
-  },
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "moduleResolution": "node16",
+    "module": "Node16",
+    "noEmit": false
+  }
 }

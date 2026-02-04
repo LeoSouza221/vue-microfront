@@ -11,7 +11,10 @@
   "compilerOptions": {
     "noEmit": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-
+    "paths": {
+      "@micro/shared": ["../../packages/shared/src"],
+      "@micro/shared/*": ["../../packages/shared/src/*"]
+    },
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "types": ["node"]

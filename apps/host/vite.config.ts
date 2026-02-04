@@ -3,6 +3,7 @@ import { federation } from "@module-federation/vite";
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import postcssConfig from '../../packages/shared/src/ui/postcss.config'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -38,6 +39,6 @@ export default defineConfig({
     cssCodeSplit: false,
   },
   css: {
-     postcss: require.resolve('../../packages/shared/src/ui/postcss.config.ts')
+    postcss: postcssConfig
   }
 })

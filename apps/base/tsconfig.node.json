@@ -1,17 +1,14 @@
 {
   "extends": "@tsconfig/node24/tsconfig.json",
   "include": [
-    "vite.config.*",
-    "vitest.config.*",
-    "cypress.config.*",
-    "nightwatch.conf.*",
-    "playwright.config.*",
-    "eslint.config.*"
+    "vite.config.ts",
+    "env.d.ts",
+    "../../packages/shared/src/ui/postcss.config.ts"
   ],
   "compilerOptions": {
-    "noEmit": true,
+    "noEmit": false,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-
+    "composite": true,
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "types": ["node"]
