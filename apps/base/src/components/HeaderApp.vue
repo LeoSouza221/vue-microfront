@@ -12,7 +12,7 @@ function toggleDark() {
 </script>
 
 <template>
-  <header class="w-full bg-[var(--header-bg,#f5f5f5)] py-4 shadow-md dark:bg-[var(--header-bg,#222)]">
+  <header class="header-container">
     <div class="flex items-center justify-between max-w-screen-xl mx-auto px-8">
       <h1 class="text-2xl font-semibold dark:text-white">My Application Header</h1>
       <button

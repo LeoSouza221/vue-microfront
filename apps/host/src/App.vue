@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue'
-// import LoadingComponent from './components/LoadingComponent.vue'
-// import ErrorComponent from './components/ErrorComponent.vue'
 import { loadRemoteComponent } from '@micro/shared'
 
 const HeaderApp = defineAsyncComponent(() =>
@@ -11,7 +9,6 @@ const HeaderApp = defineAsyncComponent(() =>
 
 <template>
   <div id="app">
-    <!-- <component v-if="HeaderApp" :is="HeaderApp" /> -->
     <HeaderApp />
     <h1>You did it!</h1>
     <p>
